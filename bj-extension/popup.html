@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bj Beyond Scanner</title>
+    <link rel="stylesheet" href="popup.css">
+    <style>
+        body { width: 400px; padding: 20px; }
+        #main-score { font-size: 60px; text-align: center; font-weight: bold; margin: 20px 0; }
+        .category { margin: 15px 0; }
+        .category-bar { height: 8px; background: #f0f0f0; border-radius: 4px; overflow: hidden; }
+        .category-bar-fill { height: 100%; transition: width 0.3s; }
+        .category-label { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 5px; }
+        .opportunity { margin: 10px 0; padding: 10px; background: #f5f5f5; border-left: 3px solid #667eea; border-radius: 4px; }
+        .opportunity strong { display: block; margin-bottom: 5px; color: #667eea; }
+        #error { color: #F44336; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>🔍 Bj Beyond Scanner</h1>
+        <p>Website Analysis</p>
+    </div>
+    
+    <div id="loading" style="text-align: center; padding: 20px;">
+        ⏳ Analyzing website...
+    </div>
+    
+    <div id="results" style="display:none;">
+        <div id="main-score">-</div>
+        
+        <div class="category">
+            <div class="category-label">
+                <span>SEO</span>
+                <span id="seo-score">-</span>
+            </div>
+            <div class="category-bar">
+                <div id="seo-bar" class="category-bar-fill" style="width:0%"></div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <div class="category-label">
+                <span>Conversion</span>
+                <span id="conversion-score">-</span>
+            </div>
+            <div class="category-bar">
+                <div id="conversion-bar" class="category-bar-fill" style="width:0%"></div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <div class="category-label">
+                <span>Trust</span>
+                <span id="trust-score">-</span>
+            </div>
+            <div class="category-bar">
+                <div id="trust-bar" class="category-bar-fill" style="width:0%"></div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <div class="category-label">
+                <span>Technical</span>
+                <span id="technical-score">-</span>
+            </div>
+            <div class="category-bar">
+                <div id="technical-bar" class="category-bar-fill" style="width:0%"></div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <div class="category-label">
+                <span>UX</span>
+                <span id="ux-score">-</span>
+            </div>
+            <div class="category-bar">
+                <div id="ux-bar" class="category-bar-fill" style="width:0%"></div>
+            </div>
+        </div>
+        
+        <h3>Opportunities</h3>
+        <div id="opportunities"></div>
+    </div>
+    
+    <div id="error"></div>
+    
+    <script src="analyzer.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
