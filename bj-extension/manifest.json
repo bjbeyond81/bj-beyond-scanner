@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Bj Beyond Scanner",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Analyze any website for SEO, conversion, trust and technical opportunities.",
   "permissions": [
     "storage",
