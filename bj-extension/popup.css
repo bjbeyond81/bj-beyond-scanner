@@ -1,0 +1,44 @@
+* { box-sizing: border-box; }
+body {
+    width: 380px; margin: 0; padding: 16px;
+    font: 13px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1d1d1f; background: #fafafa;
+}
+header { border-bottom: 1px solid #e5e5e5; padding-bottom: 10px; margin-bottom: 14px; }
+h1 { font-size: 16px; margin: 0; letter-spacing: -0.2px; }
+h3 { font-size: 13px; margin: 18px 0 8px; text-transform: uppercase; letter-spacing: .5px; color: #555; }
+#site { margin: 2px 0 0; color: #777; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.muted { color: #888; font-size: 12px; text-align: center; margin: 8px 0 0; }
+
+button {
+    width: 100%; padding: 11px; border: 0; border-radius: 8px; cursor: pointer;
+    background: #1d1d1f; color: #fff; font-size: 14px; font-weight: 600;
+}
+button:hover { background: #333; }
+button:disabled { opacity: .5; cursor: default; }
+button.secondary { background: #fff; color: #1d1d1f; border: 1px solid #ddd; margin-top: 12px; font-weight: 500; }
+button.secondary:hover { background: #f0f0f0; }
+
+#loading { text-align: center; padding: 30px 0; color: #666; }
+
+#main-score { font-size: 56px; font-weight: 700; text-align: center; margin: 6px 0 0; }
+#platform { margin-bottom: 10px; }
+
+.category { margin: 10px 0; }
+.category-label { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 4px; font-weight: 500; }
+.category-bar { height: 7px; background: #e9e9e9; border-radius: 4px; overflow: hidden; }
+.category-bar-fill { height: 100%; width: 0; transition: width .4s ease; }
+
+.opportunity {
+    margin: 8px 0; padding: 9px 10px; background: #fff;
+    border: 1px solid #eee; border-left: 3px solid #999; border-radius: 6px;
+}
+.opportunity.high { border-left-color: #F44336; }
+.opportunity.medium { border-left-color: #FFC107; }
+.opportunity.low { border-left-color: #4CAF50; }
+.opportunity strong { display: block; margin-bottom: 2px; }
+.opportunity p { margin: 0; color: #555; font-size: 12px; }
+.tag { font-size: 10px; text-transform: uppercase; color: #999; margin-left: 4px; font-weight: 500; }
+
+#error { color: #F44336; margin-top: 10px; }
+#error:empty { display: none; }
