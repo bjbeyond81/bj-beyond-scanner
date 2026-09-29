@@ -46,7 +46,7 @@ async function scan() {
     $('error').innerText = '';
     const used = await getUsage();
     if (used >= FREE_LIMIT) {
-        $('error').innerText = `Limite giornaliero raggiunto (${FREE_LIMIT} scan). Passa a Pro per scan illimitati.`;
+        $('error').innerText = `Limite giornaliero raggiunto (${FREE_LIMIT} scan). Riprova domani.`;
         return;
     }
 
